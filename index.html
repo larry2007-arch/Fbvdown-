@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fbvdown - Free Facebook Video Downloader Online | High Quality MP4</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="fbvdown is the fastest, free Facebook video downloader online. Save Facebook videos, reels, and stories in HD & SD quality directly to your device without registration.">
+    <meta name="keywords" content="facebook video downloader, download facebook videos, fb video downloader, facebook reels downloader, save facebook videos online, free fb downloader, facebook video to mp4, download private facebook videos, fb story downloader">
+    <meta name="author" content="fbvdown">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="fbvdown - Best Free Facebook Video Downloader">
+    <meta property="og:description" content="Download Facebook videos easily. Fast, free, and no registration required.">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        .ad-container { min-height: 100px; display: flex; align-items: center; justify-content: center; background: #e2e8f0; border-radius: 12px; border: 2px dashed #cbd5e1; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4 border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">fbv<span class="text-blue-600">down</span></h1>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto w-full px-4 py-8 space-y-8">
+        
+        <!-- Input Section -->
+        <section class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Download Facebook Videos Online</h2>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <input type="url" id="video-url" placeholder="Paste Facebook video URL here..." 
+                    class="flex-grow p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+                <button id="download-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition">
+                    Download
+                </button>
+            </div>
+            
+            <div id="loader" class="hidden text-center py-6 text-gray-500 font-medium italic">Waking up backend... Please wait.</div>
+            <div id="result-box" class="hidden mt-6 pt-6 border-t border-gray-100 space-y-4">
+                <div id="video-title" class="font-bold text-gray-800"></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a id="sd-link" href="#" target="_blank" class="block text-center bg-gray-800 text-white py-3 rounded-lg hover:bg-black font-semibold">Download SD</a>
+                    <a id="hd-link" href="#" target="_blank" class="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-800 font-semibold">Download HD</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Slot -->
+        <section class="ad-container text-gray-500 text-sm font-semibold italic">
+            <span>Advertisement (Responsive Ad Slot)</span>
+        </section>
+
+        <!-- Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-[400px]">
+            <!-- How To Use -->
+            <div class="bg-white p-6 rounded-2xl shadow border border-gray-100 flex flex-col">
+                <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">How To Use</h3>
+                <div class="overflow-y-auto custom-scrollbar pr-2 space-y-4 text-gray-600 text-sm">
+                    <p>1. Open Facebook and navigate to the video you want to save.</p>
+                    <p>2. Tap the "Share" button and select "Copy Link".</p>
+                    <p>3. Return to fbvdown and paste the URL into the input field.</p>
+                    <p>4. Press the "Download" button to fetch your video data.</p>
+                    <p>5. Choose HD or SD quality to begin the download to your device.</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="bg-white p-6 rounded-2xl shadow border border-gray-100 flex flex-col">
+                <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Frequently Asked Questions</h3>
+                <div class="overflow-y-auto custom-scrollbar pr-2 space-y-4 text-gray-600 text-sm">
+                    <p><strong>1. Is fbvdown free?</strong> Yes, 100% free.</p>
+                    <p><strong>2. Do you store videos?</strong> No, we don't save your content.</p>
+                    <p><strong>3. Why is my link not working?</strong> Ensure it is a public video.</p>
+                    <p><strong>4. Can I use on mobile?</strong> Yes, fully responsive.</p>
+                    <p><strong>5. Is it legal?</strong> For personal backup only.</p>
+                    <p><strong>6. HD quality available?</strong> Yes, choose the HD button.</p>
+                    <p><strong>7. Limit per day?</strong> No download limits.</p>
+                    <p><strong>8. Do I need an app?</strong> No, browser-based only.</p>
+                    <p><strong>9. Are there viruses?</strong> No, we are clean.</p>
+                    <p><strong>10. How fast is it?</strong> Depends on your connection speed.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-6 text-gray-500 text-xs">
+        &copy; 2026 fbvdown - Facebook Video Downloader
+    </footer>
+
+    <script>
+        const API_URL = "https://fdbackend-2dnj.onrender.com/api/download";
+        
+        // Backend Wake-up logic
+        fetch(API_URL, { method: 'HEAD' }).catch(() => console.log("Warming up..."));
+
+        document.getElementById('download-btn').addEventListener('click', async () => {
+            const url = document.getElementById('video-url').value;
+            const loader = document.getElementById('loader');
+            const resultBox = document.getElementById('result-box');
+            loader.classList.remove('hidden');
+            resultBox.classList.add('hidden');
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ url })
+                });
+                const data = await response.json();
+                if(data.success) {
+                    document.getElementById('video-title').textContent = data.title;
+                    document.getElementById('sd-link').href = data.links.sd;
+                    document.getElementById('hd-link').href = data.links.hd;
+                    resultBox.classList.remove('hidden');
+                } else {
+                    alert(data.message || "Error processing link.");
+                }
+            } catch(e) {
+                alert("Backend error: Service is waking up or link is invalid.");
+            } finally {
+                loader.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
