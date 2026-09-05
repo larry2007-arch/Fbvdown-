@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI UGC Blueprint | Masterclass Lesson Plan</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fdf4f6',
+                            100: '#fbe8ed',
+                            500: '#e11d48',
+                            600: '#be123c',
+                            700: '#9f1239',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen transition-colors duration-300 dark:bg-slate-950 bg-slate-50 dark:text-slate-100 text-slate-800">
+
+    <!-- Top Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-rose-600 text-white p-2 rounded-xl shadow-lg shadow-rose-600/30">
+                    <i class="fa-solid fa-video text-lg"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight bg-gradient-to-r from-rose-500 to-orange-500 bg-clip-text text-transparent">
+                    AI UGC Blueprint
+                </span>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:ring-2 hover:ring-rose-500 transition-all">
+                    <i id="theme-icon" class="fa-solid fa-sun text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- Hero Section -->
+        <section class="text-center space-y-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/10 text-rose-500 dark:bg-rose-500/20 dark:text-rose-400 border border-rose-500/20">
+                <i class="fa-solid fa-bolt mr-1.5"></i> Comprehensive Video Course Curriculum
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                Masterclass Lesson Plan & Creator Guide
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-base sm:text-lg">
+                Transform absolute beginners and traditional creators into high-efficiency AI User-Generated Content (UGC) producers without stepping in front of a physical camera[cite: 1].
+            </p>
+        </section>
+
+        <!-- Video Placeholder Section -->
+        <section class="space-y-3">
+            <h2 class="text-xl font-bold flex items-center gap-2">
+                <i class="fa-solid fa-circle-play text-rose-500"></i> Course Overview Tutorial
+            </h2>
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900 flex flex-col items-center justify-center group">
+                <!-- Replace the inner content or video tag with your actual tutorial video source -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent pointer-events-none"></div>
+                <div class="z-10 text-center space-y-3 p-6">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-rose-600 text-white flex items-center justify-center shadow-lg shadow-rose-600/40 group-hover:scale-110 transition-transform cursor-pointer">
+                        <i class="fa-solid fa-play text-2xl ml-1"></i>
+                    </div>
+                    <p class="font-semibold text-slate-300">Tutorial Video Placeholder</p>
+                    <p class="text-xs text-slate-500">Embed your tutorial video source here</p>
+                </div>
+                <!-- Optional: Uncomment and use the video tag below when you have your file/link ready -->
+                <!-- <video class="w-full h-full object-cover" controls>
+                    <source src="your-tutorial-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+            </div>
+        </section>
+
+        <!-- Course Overview & Objectives -->
+        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
+            <h2 class="text-2xl font-bold flex items-center gap-3">
+                <i class="fa-solid fa-bullseye text-rose-500"></i> Course Overview & Objectives
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                Welcome to the AI UGC Blueprint masterclass. This curriculum is designed to transform absolute beginners and traditional content creators into high-efficiency AI User-Generated Content (UGC) producers. By mastering AI-driven avatars, automated scripting frameworks, and smart editing workflows, creators can build scalable faceless video channels, secure brand deals, and promote digital or physical products without ever stepping in front of a physical camera or hiring actors[cite: 1].
+            </p>
+            <div class="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/10 space-y-3">
+                <h3 class="font-bold text-rose-600 dark:text-rose-400 flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap"></i> Learning Outcomes
+                </h3>
+                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                    By the end of this masterclass, students will be able to write psychological conversion hooks, generate hyper-realistic AI talking-head avatars, blend clean B-roll footage, and package viral short-form videos optimized for TikTok, Instagram Reels, and YouTube Shorts[cite: 1].
+                </p>
+            </div>
+        </section>
+
+        <!-- Detailed Module Breakdown -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold flex items-center gap-3">
+                <i class="fa-solid fa-layer-group text-rose-500"></i> Detailed Module Breakdown
+            </h2>
+
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Module 1 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Module 1</span>
+                    <h3 class="text-xl font-bold">Foundations of AI UGC & Psychological Hooks</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">Understand the shift from traditional content creation to AI-powered UGC. Learn why modern audiences value raw, relatable problem-solving over polished corporate commercials[cite: 1].</p>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>The Anatomy of a Viral Hook:</strong> Crafting 0-3 second pattern interrupts that stop the scroll[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Niche Selection:</strong> Identifying profitable niches (e.g., SaaS apps, e-commerce products, karma/moral storytelling, financial tools)[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Ethical & Platform Best Practices:</strong> Navigating disclosure, community guidelines, and platform monetization policies[cite: 1].</span></li>
+                    </ul>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Module 2</span>
+                    <h3 class="text-xl font-bold">Scriptwriting Frameworks for High Conversion</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">Great AI video starts with human psychology. Students learn step-by-step copywriting frameworks tailored for short-form retention[cite: 1].</p>
+                    
+                    <!-- Script Timeline Table -->
+                    <div class="overflow-x-auto pt-2">
+                        <table class="w-full text-left text-sm border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-200 dark:border-slate-800 text-slate-400">
+                                    <th class="py-3 px-4 font-semibold">Video Timeline</th>
+                                    <th class="py-3 px-4 font-semibold">Stage Name</th>
+                                    <th class="py-3 px-4 font-semibold">Objective & Script Focus</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800/60 text-slate-600 dark:text-slate-300">
+                                <tr>
+                                    <td class="py-3 px-4 font-mono text-rose-500 font-semibold">0-3s</td>
+                                    <td class="py-3 px-4 font-medium">The Hook</td>
+                                    <td class="py-3 px-4">Stop the scroll with a bold claim, polarizing question, or common frustration[cite: 1].</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-mono text-rose-500 font-semibold">3-10s</td>
+                                    <td class="py-3 px-4 font-medium">The Problem</td>
+                                    <td class="py-3 px-4">Deepen the pain point; make the viewer feel understood[cite: 1].</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-mono text-rose-500 font-semibold">10-25s</td>
+                                    <td class="py-3 px-4 font-medium">The Solution</td>
+                                    <td class="py-3 px-4">Introduce the product or offer naturally as the ultimate relief[cite: 1].</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-mono text-rose-500 font-semibold">25-40s</td>
+                                    <td class="py-3 px-4 font-medium">Proof/ Demo</td>
+                                    <td class="py-3 px-4">Show screen recordings, UI walkthroughs, or close-up results[cite: 1].</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-mono text-rose-500 font-semibold">40-50s</td>
+                                    <td class="py-3 px-4 font-medium">Call-to-Action</td>
+                                    <td class="py-3 px-4">Direct instructions on what to do next ("Click link in bio")[cite: 1].</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Module 3</span>
+                    <h3 class="text-xl font-bold">Casting & Generating AI Avatars</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">Master industry-standard tools to cast and voice your virtual creators[cite: 1].</p>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Tool Selection:</strong> Overview and hands-on walkthroughs of Creatify, Arcads, Invideo AI, and HeyGen[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Consistency Management:</strong> How to lock facial features, voice tones, and clothing styles across multi-part series or ad variants[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Voice Synthesis & Emotion:</strong> Fine-tuning pitch, pacing, and emotional delivery to eliminate robotic tones[cite: 1].</span></li>
+                    </ul>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Module 4</span>
+                    <h3 class="text-xl font-bold">Product Integration & Dynamic B-Roll</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">Elevate videos from basic talking heads to dynamic commercial pieces[cite: 1].</p>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Asset Integration:</strong> Seamlessly placing product mockups, app screenshots, or physical packages into the avatar's environment[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>B-Roll Layering:</strong> Alternating between the AI creator and high-converting lifestyle clips or stock footage to maximize viewer retention[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Pacing & Transition Hacks:</strong> Eliminating dead air and keeping visual rhythm tight[cite: 1].</span></li>
+                    </ul>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Module 5</span>
+                    <h3 class="text-xl font-bold">Post-Production, Captions & Publishing</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">The final polish that turns raw AI output into viral-ready content[cite: 1].</p>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Dynamic Captions:</strong> Utilizing editing apps (like CapCut or Opus Clip) to generate bold, engaging, color-highlighted captions[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Audio Mixing:</strong> Layering trending or subtle background tracks at safe decibel levels (-24dB to -30dB) so voiceovers remain crystal clear[cite: 1].</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span><strong>Distribution Strategy:</strong> Scheduling across TikTok, YouTube Shorts, and Instagram Reels for maximum organic reach[cite: 1].</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Masterclass Implementation Exercise -->
+        <section class="bg-gradient-to-br from-rose-500/10 via-orange-500/5 to-transparent border border-rose-500/20 rounded-3xl p-6 sm:p-8 space-y-4">
+            <h2 class="text-2xl font-bold flex items-center gap-3">
+                <i class="fa-solid fa-list-check text-rose-500"></i> Masterclass Implementation Exercise
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm">
+                To complete the course, students must complete a capstone project[cite: 1]:
+            </p>
+            <ol class="space-y-3 text-sm text-slate-600 dark:text-slate-300 list-decimal list-inside font-medium">
+                <li class="pl-2">Choose a sample product or digital offer (or use an affiliate product)[cite: 1].</li>
+                <li class="pl-2">Draft a 45-second script using the 5-part conversion framework covered in Module 2[cite: 1].</li>
+                <li class="pl-2">Generate a talking-head avatar video using an AI UGC platform[cite: 1].</li>
+                <li class="pl-2">Export, add dynamic captions, and prepare the final video for publishing[cite: 1].</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-8 text-center text-sm text-slate-500">
+        <p>AI UGC Blueprint Masterclass Curriculum All Rights Reserved. Ready for packaging and sale on Selar[cite: 1].</p>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        // Check local storage or preference
+        if (localStorage.theme === 'light') {
+            htmlElement.classList.remove('dark');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        } else {
+            htmlElement.classList.add('dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        });
+    </script>
+</body>
+</html>
