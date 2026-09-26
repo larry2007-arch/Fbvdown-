@@ -49,14 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const siteUrl = encodeURIComponent('https://fbvdown.com.ng');
     const shareText = encodeURIComponent('Download Facebook Videos and Reels in 1-Click with FBVDOWN!');
 
-    const shareWA = document.getElementById('shareWA');
-    const shareFB = document.getElementById('shareFB');
-    const shareX = document.getElementById('shareX');
-
-    if (shareWA) shareWA.href = `https://api.whatsapp.com/send?text=${shareText}%20${siteUrl}`;
-    if (shareFB) shareFB.href = `https://www.facebook.com/sharer/sharer.php?u=${siteUrl}`;
-    if (shareX) shareX.href = `https://twitter.com/intent/tweet?text=${shareText}&url=${siteUrl}`;
-});
+    
+    
 
 // 4. Native Device Sharing Function (For Mobile Devices)
 function shareNative() {
