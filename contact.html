@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FBVDOWN.com.ng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #eef2f5;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #203245;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .brand-title {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-title span {
+            font-weight: 400;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .menu-toggle {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: #ffffff;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+            text-align: center;
+        }
+
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            margin: 10px auto 15px;
+            object-fit: contain;
+        }
+
+        .hero-title {
+            color: #203245;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .hero-subtitle {
+            color: #203245;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .page-heading {
+            color: #8c9ba5;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: #203245;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #ffffff;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-control:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.15);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Captcha Box */
+        .captcha-container {
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 15px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .captcha-label {
+            font-weight: 700;
+            color: #203245;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .captcha-input {
+            width: 90px;
+            padding: 10px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            background-color: #1877f2;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 24px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #1464cc;
+        }
+
+        .error-message {
+            color: #d93025;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #65676b;
+            border-top: 1px solid #e1e4e8;
+            background-color: #ffffff;
+        }
+
+        footer a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .captcha-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .captcha-input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="/" class="brand-container">
+            <img src="lo.png" alt="FBVDOWN Logo" class="brand-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%231877f2\'><rect width=\'100\' height=\'100\' rx=\'20\'/><path d=\'M50 20v45M30 45l20 20 20-20\' stroke=\'%23fff\' stroke-width=\'12\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>'">
+            <div class="brand-title">FBVDOWN<span>.com.ng</span></div>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <img src="lo.png" alt="FBVDOWN Logo" class="hero-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%231877f2\'><rect width=\'100\' height=\'100\' rx=\'20\'/><path d=\'M50 20v45M30 45l20 20 20-20\' stroke=\'%23fff\' stroke-width=\'12\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>'">
+        
+        <h1 class="hero-title">FBVDOWN<span>.com.ng</span></h1>
+        <div class="hero-subtitle">Facebook Video Downloader</div>
+        
+        <div class="page-heading">Contact us</div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <label for="name">Name: *</label>
+                <input type="text" id="name" name="name" class="form-control" required placeholder="Your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email: *</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject: *</label>
+                <input type="text" id="subject" name="subject" class="form-control" required placeholder="How can we help you?">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message: *</label>
+                <textarea id="message" name="message" class="form-control" required placeholder="Describe your issue or feedback in detail..."></textarea>
+            </div>
+
+            <!-- Human Verification Test -->
+            <div class="form-group">
+                <label>Human Verification: *</label>
+                <div class="captcha-container">
+                    <span class="captcha-label" id="captchaQuestion">What is 5 + 5?</span>
+                    <input type="number" id="captchaAnswer" class="form-control captcha-input" required placeholder="?">
+                </div>
+                <div id="captchaError" class="error-message">Incorrect answer to human verification test. Please try again.</div>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <a href="https://fbvdown.com.ng">FBVDOWN.com.ng</a>. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Logic for Math Captcha and Form Mailto Handling -->
+    <script>
+        let num1, num2, correctAnswer;
+
+        // Function to generate a random math question (e.g. 5 + 5, 8 + 3)
+        function generateCaptcha() {
+            num1 = Math.floor(Math.random() * 9) + 1; // 1 to 9
+            num2 = Math.floor(Math.random() * 9) + 1; // 1 to 9
+            correctAnswer = num1 + num2;
+            
+            document.getElementById('captchaQuestion').textContent = `What is ${num1} + ${num2}?`;
+            document.getElementById('captchaAnswer').value = '';
+        }
+
+        // Initialize captcha on load
+        window.onload = generateCaptcha;
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const userAnswer = parseInt(document.getElementById('captchaAnswer').value, 10);
+            const errorElement = document.getElementById('captchaError');
+
+            // Validate human test
+            if (userAnswer !== correctAnswer) {
+                errorElement.style.display = 'block';
+                generateCaptcha();
+                return;
+            }
+
+            errorElement.style.display = 'none';
+
+            // Retrieve form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Target recipient email address
+            const recipient = 'fbvdown@gmail.com';
+
+            // Construct email body
+            const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            
+            // Redirect to user's mail client
+            window.location.href = `mailto:${recipient}?subject=${encodeURIComponent('[FBVDOWN Contact] ' + subject)}&body=${emailBody}`;
+        }
+    </script>
+</body>
+</html>
