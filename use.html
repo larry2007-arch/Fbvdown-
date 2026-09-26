@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - FBVDOWN.com.ng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #eef2f5;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #203245;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .brand-title {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-title span {
+            font-weight: 400;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation Links Styling */
+        .menu-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .menu-toggle a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .menu-toggle span {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .menu-toggle a:hover span {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .chrome-icon {
+            font-size: 1rem;
+            color: #4285F4;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            object-fit: contain;
+        }
+
+        .hero-title {
+            color: #203245;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .hero-subtitle {
+            color: #203245;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .page-heading {
+            color: #8c9ba5;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        /* Step Card Styling */
+        .guide-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .step-card {
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background-color: #1877f2;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-info h3 {
+            color: #203245;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step-info p {
+            color: #555555;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* Tip Box */
+        .tip-box {
+            background-color: #e8f0fe;
+            border-left: 4px solid #1877f2;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .tip-box i {
+            color: #1877f2;
+            font-size: 1.4rem;
+            margin-top: 2px;
+        }
+
+        .tip-box p {
+            color: #203245;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Call to Action Box */
+        .cta-container {
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .cta-container h3 {
+            color: #203245;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .cta-container p {
+            color: #65676b;
+            margin-bottom: 20px;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background-color: #1877f2;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #1464cc;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #65676b;
+            border-top: 1px solid #e1e4e8;
+            background-color: #ffffff;
+        }
+
+        footer a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 580px) {
+            header {
+                justify-content: center;
+            }
+            .menu-toggle {
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+            }
+            .step-card {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="brand-container">
+            <img src="lo.png" alt="FBVDOWN Logo" class="brand-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%231877f2\'><rect width=\'100\' height=\'100\' rx=\'20\'/><path d=\'M50 20v45M30 45l20 20 20-20\' stroke=\'%23fff\' stroke-width=\'12\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>'">
+            <div class="brand-title">FBVDOWN<span>.com.ng</span></div>
+        </a>
+
+        <!-- Navigation Menu -->
+        <div class="menu-toggle" aria-label="Toggle Navigation">
+            <a href="index.html"> <span>Home</span> </a>
+            <a href="use.html"> <span>How to use</span> </a>
+            <a href="chrome.html"> <span><i class="fa-brands fa-chrome chrome-icon"></i> Chrome extension</span> </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-section">
+            <img src="lo.png" alt="FBVDOWN Logo" class="hero-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%231877f2\'><rect width=\'100\' height=\'100\' rx=\'20\'/><path d=\'M50 20v45M30 45l20 20 20-20\' stroke=\'%23fff\' stroke-width=\'12\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>'">
+            <h1 class="hero-title">FBVDOWN<span>.com.ng</span></h1>
+            <div class="hero-subtitle">Facebook Video Downloader</div>
+            <div class="page-heading">How to Use FBVDOWN</div>
+        </div>
+
+        <!-- Step Guide -->
+        <div class="guide-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-info">
+                    <h3>Copy Video Link</h3>
+                    <p>Open Facebook on your browser or app. Find the video or Reel you want to save, click <strong>Share</strong>, and select <strong>Copy Link</strong>.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-info">
+                    <h3>Paste Link in Input Box</h3>
+                    <p>Return to <a href="index.html" style="color: #1877f2; text-decoration: none; font-weight: 600;">FBVDOWN.com.ng</a>, paste the link into the search bar, and click the <strong>Download</strong> button.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-info">
+                    <h3>Select Quality & Download</h3>
+                    <p>Choose your preferred video quality (<strong>HD Quality</strong> or <strong>Normal Quality</strong>). Click to start downloading directly to your device.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pro Tip Section -->
+        <div class="tip-box">
+            <i class="fa-solid fa-lightbulb"></i>
+            <div>
+                <strong>Pro Tip:</strong> Want to download videos even faster? Try our <a href="chrome.html" style="color: #1877f2; font-weight: 700;">Chrome Extension</a> to add a 1-click download button directly to every video on Facebook!
+            </div>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="cta-container">
+            <h3>Ready to Download?</h3>
+            <p>Paste your Facebook video link on our home page now.</p>
+            <a href="index.html" class="btn-home"><i class="fa-solid fa-download"></i> Go to Downloader</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <a href="https://fbvdown.com.ng">FBVDOWN.com.ng</a>. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+</body>
+      </html>
