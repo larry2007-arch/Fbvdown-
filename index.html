@@ -321,8 +321,35 @@
                 </div>
             </div>
         </section>
-        
-<a href="ai.html" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-rose-500 to-orange-500 rounded-xl shadow-lg shadow-rose-500/20 hover:opacity-95 transition-all">
+         
+        <section class="w-full bg-panelBg border border-borderClr rounded-3xl p-6 shadow-2xl">
+<!-- Add to Home Screen (PWA) Banner -->
+<div id="pwaBanner" class="pwa-install-banner">
+    <span><i class="fa-solid fa-mobile-screen-button"></i> Install FBVDOWN App on your phone</span>
+    <button id="pwaInstallBtn" class="btn-pwa-install">Install App</button>
+</div>
+
+<!-- Social Share Bar -->
+<div class="share-container">
+    <div class="share-title">Share FBVDOWN with Friends</div>
+    <div class="share-buttons">
+        <button class="btn-share bg-native" onclick="shareNative()">
+            <i class="fa-solid fa-share-nodes"></i> Share App
+        </button>
+        <a class="btn-share bg-wa" id="shareWA" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn-share bg-fb" id="shareFB" target="_blank">
+            <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a class="btn-share bg-x" id="shareX" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i> X
+        </a>
+    </div>
+</div>
+             
+             
+             <a href="ai.html" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-rose-500 to-orange-500 rounded-xl shadow-lg shadow-rose-500/20 hover:opacity-95 transition-all">
     <i class="fa-solid fa-graduation-cap"></i>
     <span>Learn Ai Video Creation</span>
 </a>
@@ -331,7 +358,9 @@
     <i class="fa-solid fa-fire"></i>
     <span>AI Video inspiration hub</span>
 </a>
-         
+
+        </section>
+             
         <section class="w-full bg-panelBg border border-borderClr rounded-3xl p-6 shadow-2xl">
             <div class="border-b border-borderClr pb-4 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div>
@@ -818,5 +847,6 @@
             }
         });
     </script> 
+     
 </body>
 </html>
