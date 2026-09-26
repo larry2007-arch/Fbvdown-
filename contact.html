@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -31,6 +33,8 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .brand-container {
@@ -60,22 +64,43 @@
             opacity: 0.9;
         }
 
+        /* Navigation Links Styling */
         .menu-toggle {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 6px;
-            padding: 8px 12px;
-            cursor: pointer;
             display: flex;
-            flex-direction: column;
-            gap: 4px;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .menu-toggle a {
+            text-decoration: none;
+            display: inline-block;
         }
 
         .menu-toggle span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background-color: #ffffff;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .menu-toggle a:hover span {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .chrome-icon {
+            font-size: 1rem;
+            color: #4285F4;
         }
 
         /* Main Content */
@@ -235,7 +260,15 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 580px) {
+            header {
+                justify-content: center;
+            }
+            .menu-toggle {
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+            }
             .captcha-container {
                 flex-direction: column;
                 align-items: flex-start;
@@ -250,15 +283,17 @@
 
     <!-- Header Navigation -->
     <header>
-        <a href="/" class="brand-container">
+        <a href="index.html" class="brand-container">
             <img src="lo.png" alt="FBVDOWN Logo" class="brand-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%231877f2\'><rect width=\'100\' height=\'100\' rx=\'20\'/><path d=\'M50 20v45M30 45l20 20 20-20\' stroke=\'%23fff\' stroke-width=\'12\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>'">
             <div class="brand-title">FBVDOWN<span>.com.ng</span></div>
         </a>
-        <button class="menu-toggle" aria-label="Toggle Navigation">
-          <a href="index.html">  <span>Home</span> </a>
-         <a href="use.html">     <span>How to use</span> </a>
-         <a href="chrome.html">     <span>Chrome extension</span> </a>
-        </button>
+
+        <!-- Navigation Menu -->
+        <div class="menu-toggle" aria-label="Toggle Navigation">
+            <a href="index.html"> <span>Home</span> </a>
+            <a href="use.html"> <span>How to use</span> </a>
+            <a href="chrome.html"> <span><i class="fa-brands fa-chrome chrome-icon"></i> Chrome extension</span> </a>
+        </div>
     </header>
 
     <!-- Main Content Area -->
@@ -360,4 +395,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
