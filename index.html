@@ -43,6 +43,13 @@
     <meta name="theme-color" content="#0b0f19">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+     <!-- PWA Manifest & Theme Color -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#203245">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FBVDOWN">
+<link rel="apple-touch-icon" href="lo.png">
 
     <!-- Canonical URL (Consolidates link equity for search engine crawlers) -->
     <link rel="canonical" href="https://fbvdown.com.ng/">
@@ -95,6 +102,90 @@
             background-image: radial-gradient(rgba(24, 119, 242, 0.15) 1px, transparent 0);
             background-size: 24px 24px;
         }
+
+         /* PWA Banner & Share Button Styles */
+.pwa-install-banner {
+    display: none;
+    background-color: #203245;
+    color: #ffffff;
+    padding: 12px 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.pwa-install-banner span {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.btn-pwa-install {
+    background-color: #1877f2;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-pwa-install:hover {
+    background-color: #1464cc;
+}
+
+/* Social Share Bar */
+.share-container {
+    background-color: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 25px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.share-title {
+    color: #203245;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-share {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-share:hover {
+    opacity: 0.9;
+}
+
+.bg-wa { background-color: #25D366; }
+.bg-fb { background-color: #1877F2; }
+.bg-x { background-color: #000000; }
+.bg-native { background-color: #203245; }
     </style>
      
     
