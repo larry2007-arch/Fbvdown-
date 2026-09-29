@@ -24,7 +24,6 @@
             min-height: 100vh;
         }
 
-        /* Header */
         header {
             background-color: #ffffff;
             border-bottom: 1px solid #e9ecef;
@@ -56,12 +55,12 @@
             color: #0d6efd;
         }
 
-        header nav, header div[aria-label="Toggle Navigation"] {
+        header div[aria-label="Toggle Navigation"] {
             display: flex;
             gap: 20px;
         }
 
-        header nav a, header div[aria-label="Toggle Navigation"] a {
+        header div[aria-label="Toggle Navigation"] a {
             text-decoration: none;
             color: #495057;
             font-weight: 500;
@@ -69,14 +68,13 @@
             transition: color 0.2s;
         }
 
-        header nav a:hover, header div[aria-label="Toggle Navigation"] a:hover {
+        header div[aria-label="Toggle Navigation"] a:hover {
             color: #0d6efd;
         }
 
-        /* Main Container */
         main {
             flex: 1;
-            max-width: 600px;
+            max-width: 550px;
             width: 90%;
             margin: 40px auto;
             background: #ffffff;
@@ -108,14 +106,13 @@
         }
 
         .page-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 20px;
             border-bottom: 2px solid #f1f3f5;
             padding-bottom: 10px;
         }
 
-        /* Form Styles */
         .contact-form {
             text-align: left;
         }
@@ -126,7 +123,7 @@
 
         .form-group label {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
             margin-bottom: 6px;
             color: #343a40;
@@ -184,7 +181,6 @@
             font-weight: 500;
         }
 
-        /* Footer */
         footer {
             background-color: #ffffff;
             border-top: 1px solid #e9ecef;
@@ -245,7 +241,7 @@
 
             <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
             </div>
 
             <div class="form-group">
@@ -269,17 +265,19 @@
             const submitBtn = document.getElementById('submitBtn');
             const status = document.getElementById('formStatus');
 
-            const email = document.getElementById('user_email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+            const email = document.getElementById('user_email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
 
             submitBtn.disabled = true;
             status.style.color = '#333';
             status.textContent = 'Sending message...';
 
             try {
-                // Point this to your backend handler route or file (e.g., /send-contact.php or /api/send-contact)
-                const response = await fetch('/api/send-contact', {
+                // Adjust endpoint URL if host runs on port 5000 directly
+                const API_URL = 'https://fbvdown.com.ng/api/send-contact';
+
+                const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -308,4 +306,4 @@
     </script>
 
 </body>
-        </html>
+    </html>
