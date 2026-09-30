@@ -59,28 +59,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image" href="lo.png">
         <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+                colors: {
+                    fbBlue: {
+                        50: '#ecf3ff',
+                        100: '#dbebff',
+                        500: '#1877f2',
+                        600: '#166fe5',
+                        700: '#0e5aae',
                     },
-                    colors: {
-                        fbBlue: {
-                            50: '#ecf3ff',
-                            100: '#dbebff',
-                            500: '#1877f2',
-                            600: '#166fe5',
-                            700: '#0e5aae',
-                        },
-                        darkBg: '#0b0f19',
-                        panelBg: '#131c2e',
-                        borderClr: '#1e293b'
-                    }
+                    // Updated light/charcoal theme palette:
+                    pageBg: '#f8f9fa',     /* Off-white light background */
+                    charcoalText: '#2d3748',/* Deep charcoal body text */
+                    panelBg: '#ffffff',    /* White card/form background */
+                    borderClr: '#e2e8f0'   /* Light gray border color */
                 }
             }
         }
-    </script>
+    }
+     </script>
     <style>
          body {
     background-color: #f8f9fa;
