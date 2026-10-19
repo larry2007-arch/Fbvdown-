@@ -43,6 +43,35 @@
     <!-- Canonical URL (Consolidates link equity for search engine crawlers) -->
     <link rel="canonical" href="https://fbvdown.com.ng/">
     
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image" href="lo.png">
+        <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+                colors: {
+                    fbBlue: {
+                        50: '#ecf3ff',
+                        100: '#dbebff',
+                        500: '#1877f2',
+                        600: '#166fe5',
+                        700: '#0e5aae',
+                    },
+                    // Updated light/charcoal theme palette:
+                    pageBg: '#f8f9fa',     /* Off-white light background */
+                    charcoalText: '#2d3748',/* Deep charcoal body text */
+                    panelBg: '#ffffff',    /* White card/form background */
+                    borderClr: '#e2e8f0'   /* Light gray border color */
+                }
+            }
+        }
+    }
+        </script>
     <style>
          body {
     background-color: #f8f9fa;
@@ -69,74 +98,8 @@
             background-size: 24px 24px;
         }
         /* ==========================================================================
-   Google Font & Font Awesome Imports
-   ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-/* ==========================================================================
-   CSS Custom Properties (Theme Tokens)
-   ========================================================================== */
-:root {
-  /* Font Family */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-
-  /* Facebook Blue Palette */
-  --color-fb-blue-50: #ecf3ff;
-  --color-fb-blue-100: #dbebff;
-  --color-fb-blue-500: #1877f2;
-  --color-fb-blue-600: #166fe5;
-  --color-fb-blue-700: #0e5aae;
-
-  /* Light / Charcoal Theme Palette */
-  --color-page-bg: #f8f9fa;      /* Off-white light background */
-  --color-charcoal-text: #2d3748;/* Deep charcoal body text */
-  --color-panel-bg: #ffffff;     /* White card/form background */
-  --color-border-clr: #e2e8f0;   /* Light gray border color */
-}
-
-/* ==========================================================================
-   Base Styles & Reset
-   ========================================================================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--font-sans);
-  background-color: var(--color-page-bg);
-  color: var(--color-charcoal-text);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ==========================================================================
-   Utility Classes (Replacing Tailwind Utility Names)
-   ========================================================================== */
-
-/* Backgrounds */
-.bg-page { background-color: var(--color-page-bg); }
-.bg-panel { background-color: var(--color-panel-bg); }
-.bg-fb-blue { background-color: var(--color-fb-blue-500); }
-.bg-fb-blue-hover:hover { background-color: var(--color-fb-blue-600); }
-
-/* Text Colors */
-.text-charcoal { color: var(--color-charcoal-text); }
-.text-fb-blue { color: var(--color-fb-blue-500); }
-
-/* Borders */
-.border-theme { border: 1px solid var(--color-border-clr); }
-
-/* Common Layout Helpers */
-.panel-card {
-  background-color: var(--color-panel-bg);
-  border: 1px solid var(--color-border-clr);
-  border-radius: 8px;
-  padding: 1.5rem;
-    }
+  
 
          /* PWA Banner & Share Button Styles */
 .pwa-install-banner {
