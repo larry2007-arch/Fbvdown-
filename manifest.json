@@ -1,21 +1,11 @@
 {
+  "manifest_version": 3,
   "name": "FBVDOWN - Facebook Video Downloader",
-  "short_name": "FBVDOWN",
-  "description": "Download Facebook videos, Reels, and Watch clips easily in HD/SD.",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#203245",
-  "theme_color": "#203245",
-  "icons": [
-    {
-      "src": "lo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "lo.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "version": "1.0",
+  "description": "Quick access to download Facebook videos and Reels via FBVDOWN.com.ng",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "lo.png"
+  },
+  "permissions": ["activeTab"]
 }
